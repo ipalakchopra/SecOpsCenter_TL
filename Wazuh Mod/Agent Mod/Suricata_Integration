@@ -1,0 +1,19 @@
+<ossec_config>
+    <client>
+        <server>
+        <address>10.130.157.140</address>
+        <port>1514</port>
+        <protocol>tcp</protocol>
+        </server>
+        <config-profile>ubuntu, ubuntu24, ubuntu24.04</config-profile>
+        <notify_time>10</notify_time>
+        <time-reconnect>60</time-reconnect>
+        <auto_restart>yes</auto_restart>
+        <crypto_method>aes</crypto_method>
+        <enrollment>
+        <enabled>yes</enabled>
+        <agent_name>suricata</agent_name>
+        <authorization_pass_path>etc/authd.pass</authorization_pass_path>
+        </enrollment>
+    </client>
+</ossec_config>
