@@ -1,0 +1,11 @@
+<!--File Integrity Monitoring-->
+<!--Monitoring all changes in the directory also combined with auditd to report what user made the changes-->
+<!--Install dependencies on endpoint:
+sudo apt install auditd
+sudo apt install audispd-plugins -->
+
+<!--Edits in /var/ossec/etc/ossec.conf-->
+<syscheck>
+    <disabled>no</disabled>
+    <directories check_all="yes" report_changes="yes" realtime="yes" whodata="yes">/home/ubuntu-ep/scripts</directories>
+</syscheck>
