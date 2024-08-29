@@ -10,7 +10,8 @@ to_val = "user{d}"
 mail_reg = re.compile("\w+@\w+[.\w+]*")
 
 emails = []
-email_sub = []
+users = []
+users_sub = []
 
 for line in file:
     # print(line)
@@ -18,19 +19,20 @@ for line in file:
     x=re.findall(mail_reg,line)
 
     for id in x:
-        if id not in emails:
-            emails.append(id)
-            id_new = id.split('@')            
-            # print(id_new)
-            email_sub.append(to_val.format(d=i)+'@'+id_new[1]) 
+        uname = id.split('@')[0] 
+        if uname not in users:
+            # emails.append(id)
+            users.append(uname)      
+            users_sub.append(to_val.format(d=i)) 
             i+=1
-        
-        x_ind = emails.index(id)
+    
+    for user in users: 
+        x_ind = users.index(user)
         # print(id)
         # print(x_ind)
         # print(email_sub[x_ind])
         
-        line = line.replace(id, email_sub[x_ind])
+        line = line.replace(user, users_sub[x_ind])
     
     # print(x)
     # print(emails)
@@ -39,8 +41,9 @@ for line in file:
     # print("---")
     new_file.write(line)
 
-# print(emails)
-# print(email_sub)
+print(emails)
+print(users)
+print(users_sub)
 
 file.close()
 

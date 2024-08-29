@@ -505,4 +505,4 @@ Aug 27 08:50:16 mail postfix/qmgr[20645]: 8D999464A71: removed
 Aug 27 08:50:16 mail postfix/local[79399]: AC8B8460943: to=<tlsoc@example.com>, orig_to=<contact@example.com>, relay=local, delay=0.01, delays=0.01/0/0/0, dsn=2.0.0, status=sent (delivered to maildir)
 Aug 27 08:50:16 mail postfix/qmgr[20645]: AC8B8460943: removed
 Aug 28 06:05:12 mail postfix/postfix-script[1439]: starting the Postfix mail system
-Aug 28 06:05:12 mail postfix/master[1441]: daemon started -- version 3.8.6, configuration /etc/postfix
+Aug 28 06:05:12 admin postfix/master[1441]: daemon started -- version 3.8.6, configuration /etc/postfix
